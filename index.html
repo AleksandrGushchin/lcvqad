@@ -65,7 +65,7 @@
               </span>
               <span class="author-block">
                   <a href="TODO SECOND AUTHOR PERSONAL LINK" 
-                    target="_blank">Maxim Smirnov</a><sup>4</sup>,
+                    target="_blank">Maksim Smirnov</a><sup>4</sup>,
               </span>
               <span class="author-block">
                   <a href="TODO SECOND AUTHOR PERSONAL LINK" 
@@ -125,7 +125,7 @@
                   <span class="icon">
                     <i class="fas fa-file-pdf"></i>
                   </span>
-                  <span>Download dataset</span>
+                  <span>Download dataset open part</span>
                 </a>
               </span>
 
@@ -190,14 +190,14 @@
                 <div class="content has-text-justified">
                     <h2 class="title is-3">Key features</h2>
                     <p>
-                        LEHA-CVQAD is <b>open-source</b> dataset with:
+                        LEHA-CVQAD is subjective dataset with:
                         <ul>
-                          <li>40+ different video codecs</li>
-                          <li>5 compression standards (H.264/AVC, H.265/HEVC, H.266/VVC, AV1, VP9)</li>
+                          <li>186 different video codecs</li>
+                          <li>5+ compression standards (including H.264/AVC, H.265/HEVC, H.266/VVC, AV1, VP9)</li>
                           <li>6,000+ compressed streams</li>
                           <li>2M+ subjective score</li>
-                          <li>20,000+ subjective assessors</li>
-                          <li>Various content, including UGC and screnn content</li>
+                          <li>15,000+ subjective assessors</li>
+                          <li>Various content, including UGC and screen content</li>
                         </ul>
                     </p>
                 </div>
@@ -215,7 +215,7 @@
                 <div class="content has-text-justified">
                     <h2 class="title is-3">Videos</h2>
                     <p>
-                      To gather source videos we parse High‐quality, openly licensed Full HD clips from Vimeo video service and clasterize 1,000,000+ videos to sample 50 of them. Sampled videos were first transcoded to a uniform YUV 4:2:0 format. Each reference video was then encoded with a suite of modern codecs (AVC/H.264, HEVC/H.265, AV1, VVC/H.266) using multiple presets and bitrate levels, yielding a broad spectrum of compressed streams for subjective quality evaluation.
+                      To gather source videos we parse high‐quality, openly licensed mostly FullHD clips from Vimeo, media.xiph, and YouTubeUGC. Then we clasterized collected 25,562 videos in terms of SI/TI to sample 60 of them. Sampled videos were first transcoded to a uniform YUV 4:2:0 format. Each reference video was then encoded with a suite of modern codecs (AVC/H.264, HEVC/H.265, AV1, VVC/H.266, VP9, etc.) using multiple presets and bitrate levels, yielding a broad spectrum of compressed streams for subjective quality evaluation.
                     </p>
                 </div>
                 <img src="static/images/selection.png">
@@ -237,7 +237,7 @@
                 <div class="content has-text-justified">
                     <h2 class="title is-3">Subjective study</h2>
                     <p>
-                      To obtain high-quality subjective score for each video in LEHA-CVQAD, we employed two consecutive subjective studies. During the first one, we performed pairwise comparisons for each reference video. This way, obtained pairwise scores do not consider content of the video, which could potentially distort the resulting scores. For the second subjective study, we sampled three videos from each group to assess their MOS values. After that we use MAP to merge these two types of subjective score, projecting them onto single scale. More detailes can be seen in the paper.
+                      To obtain reliable subjective scores for each video in LEHA-CVQAD, we employed two consecutive subjective studies. During the first one, we performed pairwise comparisons for each reference video and then applied ELO and Bradley-Terry models. This way, obtained pairwise scores do not consider content of the video, which could potentially distort the resulting scores, but apper to be highly accurate. For the second subjective study, we sampled three videos from each group to assess their MOS values. After that we use MAP to merge these two types of subjective score, projecting them onto single scale. More detailes can be seen in the paper.
                     </p>
                 </div>
             </div>
